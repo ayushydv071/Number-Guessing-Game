@@ -1,0 +1,45 @@
+This number guessing game in C++ is a great example of combining basic programming concepts into a fun and interactive console application. Here's a breakdown of the concepts used, functions involved.
+
+🧠 Concepts Used in the Code
+1. Header Files
+- #include iostream For inputoutput operations.
+- #include cstdlib For rand() and srand() functions.
+- #include ctime For time(0) to seed the random number generator.
+2. Namespace
+- using namespace std; Allows use of standard library functions without prefixing std.
+3. Random Number Generation
+- srand(time(0)) Seeds the random number generator with the current time.
+- rand() % 100 + 1 Generates a number between 1 and 100.
+4. Variables and Data Types
+- int secretNumber, guess, attempts Integer variables.
+- bool hasWon Boolean flag to track win condition.
+5. Control Structures
+- while loop Runs until the user guesses correctly or exhausts 10 attempts.
+- if-else statements Used to compare the guess with the secret number and give feedback.
+6. InputOutput
+- cin  guess Takes user input.
+- cout  ... Displays messages to the user.
+7. Logical Operators
+- !hasWon && attempts  10 Combines conditions to control loop execution.
+8. Game Logic
+- Tracks number of attempts.
+- Provides feedback based on guess.
+- Ends game after 10 tries or successful guess.
+
+🔧 Functions Used
+     
+ main()    
+ srand(time(0))    
+ rand()    
+ time(0)    
+ cin    
+ cout    
+
+
+
+
+
+
+
+
+
