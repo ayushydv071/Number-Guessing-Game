@@ -1,0 +1,28 @@
+🎓 Viva Questions with Best Answers
+🔢 Randomness and Logic
+Q1. What is the purpose of srand(time(0))?
+A: srand(time(0)) seeds the random number generator with the current time. This ensures that each time the program runs, it produces a different sequence of random numbers. Without it, rand() would generate the same sequence every time.
+Q2. Why do we use rand() % 100 + 1 instead of just rand()?
+A: rand() generates a large integer. To limit it to a specific range, we use modulo. rand() % 100 gives values from 0 to 99, and adding 1 shifts the range to 1–100, which matches the game's requirement.
+Q3. How would you modify the code to allow unlimited attempts?
+A: I would remove the condition attempts < 10 from the while loop and rely only on !hasWon. This way, the loop continues until the correct guess is made.
+
+🔁 Loops and Conditions
+Q4. What happens if the user inputs a number outside the 1–100 range?
+A: The program doesn't currently validate the input range. It will accept any integer, even outside 1–100. To fix this, I could add a check like if (guess < 1 || guess > 100) and prompt the user again.
+Q5. Can you explain the condition in the while loop?
+A: The loop continues as long as the player hasn't guessed the number (!hasWon) and hasn't exceeded 10 attempts (attempts < 10). This ensures the game ends either on a win or after 10 tries.
+Q6. What is the role of the hasWon variable?
+A: hasWon is a boolean flag that tracks whether the user has guessed the correct number. It helps control the loop and determine the final outcome message.
+
+📥 Input/Output
+Q7. What is the difference between cin and cout?
+A: cin is used to take input from the user, while cout is used to display output to the console. They are part of the iostream library.
+Q8. How would you handle invalid input (e.g., letters instead of numbers)?
+A: I would use input validation with cin.fail() to check if the input is not an integer. If it fails, I’d clear the error with cin.clear() and ignore the invalid input using cin.ignore().
+
+🧮 Variables and Data Types
+Q9. Why is hasWon a boolean instead of an integer?
+A: A boolean is more appropriate because it represents a true/false condition. Using int would work, but it's less readable and semantically incorrect for binary states.
+Q10. What would happen if attempts was initialized to 1 instead of 0?
+A: The game would allow only 9 guesses instead of 10, because the counter starts at 1 and increments before checking the limit.
